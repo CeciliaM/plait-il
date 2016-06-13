@@ -1,0 +1,266 @@
+/*
+  Foundation for Sites components:
+  Import the building blocks you need for your project.
+  Reducing the number of imported components will optimize page speed.
+  ---------------------------------------------------------------------
+  The Foundation framework is built by Zurb
+  Licensed under MIT Open Source
+*/
+
+//  Settings
+@import "global/settings"; // Foundation settings file.
+
+// Foundation mixins & browser resets
+@import '../components/foundation-sites/scss/foundation';
+
+// WP overrides
+@import "global/wp-admin"; // Fix issues with wp-admin bar positioning
+@import "global/wp-overrides"; // Override the default WordPress styling for some elements
+
+// Third-party libraries
+@import 'font-awesome';
+@import 'motion-ui';
+
+// Foundation global styles
+@include foundation-global-styles;
+
+// Individual foundation components
+@include foundation-grid;
+// @include foundation-flex-grid;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+@include foundation-range-input;
+@include foundation-accordion;
+@include foundation-accordion-menu;
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-close-button;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-flex-video;
+@include foundation-label;
+@include foundation-media-object;
+@include foundation-menu;
+@include foundation-off-canvas;
+@include foundation-orbit;
+@include foundation-pagination;
+@include foundation-progress-bar;
+@include foundation-progress-element;
+@include foundation-meter-element;
+@include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+@include foundation-menu-icon;
+// @include foundation-flex-classes;
+
+// Motion UI
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+/*
+  My custom styles:
+  Add your scss files below to structure your project styles
+*/
+
+// Modules
+@import "modules/navigation";
+@import "modules/footer";
+@import "modules/sidebar";
+@import "modules/editor-style";
+
+// Components
+@import "components/buttons";
+@import "components/featured-image";
+@import "components/dividers";
+@import "components/links";
+
+// Templates
+@import "templates/front";
+@import "templates/kitchen-sink";
+@import "templates/page-default";
+@import "templates/page-sidebar-left";
+@import "templates/page-full-width";
+@import "templates/single-post";
+
+//MENU OVERLAY
+@import "components/normalize";
+@import "components/demo";
+@import "components/style7";
+
+//FONT
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,900,800,700,500,600);
+
+
+body {
+  font-family: 'Playfair Display', serif;
+  background:#FFF;
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size:50px;
+  font-weight:700;
+  color:#000;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+}
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size:20px;
+  color:#000;
+  margin-bottom:20px;
+}
+hr {
+  width:13%;
+  border:5px solid #fccb32;
+  margin-top:0px;
+}
+
+a {
+  color:#fccb32;
+}
+// HEADER
+header {
+  height:75px;
+  .fa-navicon:before, .fa-reorder:before, .fa-bars:before {
+    font-size: 33px;
+    vertical-align: middle;
+    line-height: 50px;
+    color:#fccb32;
+  }
+  .callout{
+    border:transparent;
+  }
+  .overlay-contentpush {
+    background:#fccb32;
+    ul li a {
+      font-family:'Raleway', sans-serif;
+      font-weight:600;
+    }
+  }
+}
+
+// SLIDER HOME
+#slider-home {
+  height:800px;
+}
+
+// AGENCE - HOME
+section#agence-home {
+  p {
+    font-size:16px;
+    text-align:left;
+    color:#000;
+  }
+  .button {
+    border-radius:20px;
+    width: 40%;
+  }
+  #btn-projets {
+    background-color:#000;
+    border:2px solid transparent;
+    font-size: 15px;
+    font-weight: 600;
+    -webkit-appearance: none;
+    transition: 0.5s ease-out;
+    &:hover {
+      background:none;
+      border:2px solid #000;
+      color:#000;
+    }
+  }
+  #btn-contact {
+    background:none;
+    background-color:none;
+    color:#fccb32;
+    border:2px solid #fccb32;
+    font-size: 15px;
+    font-weight: 600;
+    -webkit-appearance: none;
+    transition: 0.5s ease-out;
+    &:hover {
+      background: #fccb32;
+      color:#FFF;
+    }
+  }
+}
+
+
+// PROJETS HOME
+#projets-home {
+  background-color:#f4f4f4;
+  clear:both;
+  p {
+    font-size: 16px;
+    color:#000;
+  }
+  .projets {
+    position:relative;
+    margin-bottom:15px;
+    -webkit-appearance: none;
+    transition: 1s ease-out;
+    &:hover {
+      figcaption {
+        display:block;
+      }
+    }
+  }
+  figcaption {
+    display:none;
+    background-color: #fccb32;
+    opacity:0.7;
+    width:93%;
+    height:100%;
+    position:absolute;
+    top:0px;
+    padding: 72px;
+    h3 {
+      z-index:2;
+      color:#000;
+      font-family: 'Raleway', sans-serif;
+      font-size:22px;
+      font-weight:600;
+    }
+    a {
+      background:none;
+      color:#000;
+      font-weight:600;
+      -webkit-appearance: none;
+      transition: 1s ease-out;
+      &:hover {
+        text-decoration: underline;
+        -webkit-appearance: none;
+        transition: 1s ease-out;
+      }
+    }
+  }
+}
+
+//CONTACT HOME
+
+#contact-home {
+  background-image: url(../assets/images/bg-contact.png);
+    p {
+      font-size: 16px;
+      color:#000;
+    }
+    #contour-jaune {
+      background-color: #fccb32;
+      width:65%;
+      margin:0 auto;
+    }
+}
