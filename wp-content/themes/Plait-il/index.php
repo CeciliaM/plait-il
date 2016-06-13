@@ -17,9 +17,7 @@ get_header(); ?>
 
 <div role="main">
 	<section id="slider-home">
-		<div class="row">
-
-		</div>
+		<?php putRevSlider( 'slider-home' ); ?>
 	</seciton>
 
 	<section id="agence-home">
