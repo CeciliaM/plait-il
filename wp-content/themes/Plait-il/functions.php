@@ -49,3 +49,10 @@ require_once( 'library/responsive-images.php' );
 
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
 // require_once( 'library/protocol-relative-theme-assets.php' );
+
+
+// Taille image
+
+if ( function_exists( 'add_image_size' ) ) {
+	add_image_size( 'cat-thumb', 370, 230, true ); /* Taille perso  1 */
+}
