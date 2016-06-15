@@ -42,6 +42,11 @@ get_header(); ?>
 							<p><?php the_field('date'); ?></p>
 							<br>
 							<a target="_blank" href="<?php the_field('visitez_site'); ?>" class="visite-site"><i class="fa fa-long-arrow-right" aria-hidden="true"></i> Visiter site</a>
+							</br>
+							</br>
+							</br>
+
+							<?php echo do_shortcode("[juiz_sps buttons='facebook, twitter, pinterest, github']"); ?>
 
 					</div>
 				</div> <!-- FIN ROW -->

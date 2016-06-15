@@ -46,9 +46,9 @@
 			<nav id="site-navigation" role="navigation">
 				<ul>
 					<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Accueil</a></li>
-					<li><a href="#agence-home">Agence</a></li>
-					<li><a href="#projets-home">Projets</a></li>
-					<li><a href="#contact-home">Contact</a></li>
+					<li><a href="index.php#agence-home">Agence</a></li>
+					<li><a href="index.php#projets-home">Projets</a></li>
+					<li><a href="index.php#contact-home">Contact</a></li>
 				</ul>
 			</nav>
 		</div>
